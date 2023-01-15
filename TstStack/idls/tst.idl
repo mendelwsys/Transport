@@ -1,0 +1,31 @@
+module chat
+{
+
+exception TException1
+{
+  string Value; //¬еличина в строковом виде
+  long IsActual;//явл€етс€ ли эта величина актуальной
+};
+
+exception TException2
+{
+  string Value2; //¬еличина в строковом виде
+  long IsActual2;/*
+явл€етс€ ли эта величина актуальной
+*/
+};
+
+typedef string arrr [0];
+typedef octet  aroct [0];
+
+interface ChatInterface {
+	void Put (in string message) raises (TException1,TException2);
+	string Get (in long timeOut);
+	void DestroyObject (out arrr myarr) raises (TException2);
+//	long M1(in long arg1_lng,in double arg2_dbl,in string arg3_str);
+//	double M2(out long arg1_lng,out double arg2_dbl,out string arg3_str);
+//	string M3(inout long arg1_lng,inout double arg2_dbl,inout string arg3_str);
+	string M4(in octet arg1_oct,in aroct argarr_in,inout aroct argarr_inout);
+	octet M5(in boolean arg0,in short arg2,inout boolean arg3 );
+};
+};

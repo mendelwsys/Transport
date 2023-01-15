@@ -1,0 +1,164 @@
+module rctrl
+{
+	typedef octet  aroct [0];
+	typedef long   arlng [0];
+	typedef double ardbl [0];
+	typedef string arstring [0];
+
+	typedef arlng   ararlng [1];
+	typedef ardbl   arardbl [1];
+
+	struct ImagePair
+	{
+		aroct pict;
+		string coords;
+	};
+
+	struct PairOptions
+	{
+		string optionname;
+		aroct value;
+	};
+
+	struct GisObjectIds
+	{
+		string id_lr;//layer identifyer
+		arstring id_obj;//object idntifier
+	};
+
+      typedef GisObjectIds GisObjectIdsArr[1];
+
+	struct GisObjectPair
+	{
+		string nameobj;//diplay object name 
+		GisObjectIdsArr objids;//array of object which compliance the name
+	};
+
+
+	struct RetSelRastr
+	{
+		//Coordinates for drawing picture in draw system
+		long xCrd;
+		long yCrd;
+		//Coordinates of draw P4 point
+		long xP4;
+		long yP4;
+
+		aroct pict;//picture in png format
+	};
+
+	struct MouseCrd
+	{
+		long xCrd;
+		long yCrd;
+	};
+
+
+	typedef ImagePair	ImagePairArr[1];
+	typedef PairOptions PairOptionsArr[1];
+	typedef PairOptionsArr PairOptionsArrArr[1];
+	typedef GisObjectPair GisObjectPairArr[1];
+	
+
+//Change position data for view found object
+	struct ChangePos
+	{
+		double dscale;//change scale
+		long dxCrd;//change x
+		long dyCrd;//change y
+		GisObjectIdsArr objids;//Objects ids array
+	};
+
+
+	interface IClientSession
+	{
+		string openSession(in string username, in string userpass); // returns client session id (cliname)
+		boolean checkSession(in string cliname); // if the session is active: false - no, true - yes
+		long closeSession(in string cliname);
+	};
+
+	interface IRemoteRastersProvider
+	{
+		long dividerRequest(in string cliname, in aroct cnv, in ardbl bp, out arardbl mp12, out arardbl pt12, out arlng dxdy, out arlng szXszY);
+		ImagePair getImageRequest(in string cliname, in ardbl dxdy, in arlng nxny);
+		ImagePairArr getImagesRequest(in string cliname, in ardbl dxdy, in ararlng nxny);
+		aroct getLegentRaster(in string cliname,in long width,in long high);
+		aroct getScaleRulerRaster(in string cliname,in long width,in long high);
+	};
+
+	interface IRctrl
+	{
+
+		long setOptions(in string cliname,in PairOptionsArrArr options);
+ 		PairOptionsArrArr getOptions(in string cliname);
+		long getStatus (in string cliname);
+
+		aroct getInitialViewParams(in string cliname,in long drwWidth, in long drwHeight);
+		aroct getViewParams(in string cliname,in long drwWidth, in long drwHeight);
+
+		long setDrawNames(in string cliname, in boolean setOn);
+
+    		long setSpecAction (in string cliname,in string action, in aroct params);
+    		long setSpecActionOff (in string cliname);
+		long setSpecActionOn (in string cliname);
+		
+	};
+	
+
+	interface IStatAnalize
+	{
+		RetSelRastr getLevelByMousePnt(in string cliname,in MouseCrd crd);
+	};
+	
+	interface ISearchObjects
+	{
+		GisObjectPairArr getObjectsByMousePnt(in string cliname,in MouseCrd crd);
+		RetSelRastr getPictureById(in string cliname,in string id_lr,in string obj_id);
+		ChangePos toObjectByName(in string cliname,in string objname);//get postion of object with object name
+
+		RetSelRastr selectOrGetPictureById(in string cliname,in string id_lr,in string obj_id);  // mixed functionality
+
+		long selectObjectById (in string cliname,in string id_lr,in string obj_id);
+		long deselectObjectById (in string cliname,in string id_lr,in string obj_id);
+
+		long selectObjectsByIds (in string cliname, in boolean deselectPrev, in aroct ids); 
+		long selectLargeObjectsByIds (in string cliname, in boolean deselectPrev, in aroct ids); // returns a number of "large" objects among the given ids
+		long deselectAllObjects (in string cliname);
+	};
+
+	interface IStorage
+	{
+		long getCurpos(in string cliname);
+		string getstrorage(in string cliname,in long i);
+		boolean hasMoreElements(in string cliname);
+		boolean hasPrevElements(in string cliname);
+		string nextElement(in string cliname);
+		long setposon(in string cliname,in long pos);
+            	string prevElement(in string cliname);
+		long size(in string cliname);
+	};
+
+	struct FDesc
+	{
+		string fname;
+		long lenght;
+	};
+
+	struct ProgressStatus
+	{
+		long maxVal;
+		long val;
+		string nameoperation;
+	};
+
+	
+	struct PackJob
+	{//Структура для передачи Jobov
+		string	path;
+		long long time;
+		long	type;
+	};
+
+	typedef PackJob arPackJob [1];
+
+};

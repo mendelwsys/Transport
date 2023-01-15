@@ -1,0 +1,73 @@
+module gpstransl
+{
+	struct ClientInfo
+	{
+		long clientid;
+	};
+
+	typedef ClientInfo ClientInfoArr[1];
+
+	struct messageStruct
+	{
+		long clientid;
+		long msgnumber;
+		string message;
+	};
+
+	struct dataStruct
+	{
+		long clientid;
+		long dotnumber;
+		boolean isWaitPoint;
+		short  lasttag; 
+		double  time;
+		double delta;
+		double velocity;
+		double deltaD;
+		double deltaS;
+		double absD;
+		double absS;
+	};
+
+	struct dataStruct_old
+	{
+		long dotnumber;
+		boolean isWaitPoint;
+		short  lasttag; 
+		double  time;
+		double delta;
+		double velocity;
+		double deltaD;
+		double deltaS;
+		double absD;
+		double absS;
+	};
+
+	typedef dataStruct dataStructArr[1];
+
+
+	interface GPSInterface {
+
+		ClientInfoArr getClientInfo();
+		
+		dataStruct get(in long idclient,in long dotnumber,in long timeOut);
+
+		void put (in dataStruct message);
+
+		void putmsg (in messageStruct strmessage);
+		messageStruct getmsg (in long idclient,in long msgnumber,in long timeOut);
+
+		dataStructArr getHistory(in long idclient,in long dotnumber,in long timeOut);
+		void resetHistory(in long idclient);
+
+		void ping ();
+	};
+
+
+	interface GPSClient {
+		void startFlow (in boolean reconnect);
+		void stopFlow ();
+	};
+
+
+};

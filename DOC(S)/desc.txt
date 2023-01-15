@@ -1,0 +1,8 @@
+Client01 и Client02 выполняют одинаковую работу но по различным каналам
+первый по HTTP второй по обычному сокету.
+IServiceImpl02 - ответная серверная чать под это.
+
+IServiceImpl01 - серверная часть под мидлет тестирующий приемо-передачу.
+..\..\Midlet2\src\su\org\coder\multiplexer\protocols\testfactory00\midlet\TestFactory01.java
+его клиентская часть
+

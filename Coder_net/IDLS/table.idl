@@ -1,0 +1,34 @@
+module trading
+{
+
+typedef octet bytearr[1];
+typedef bytearr bytearrarr[1];
+
+	struct MetaInfo
+	{
+		bytearrarr headerNames;
+		long cnty; /*Количество строк в таблице в текущей момент*/
+	};
+
+	interface Table 
+	{
+		MetaInfo getMataInfo(in string tableName);
+		void startDataFlow(in string tableName);
+		void stopDataFlow(in string tableName);
+	};
+
+	struct UpdateInfo
+	{
+		long i;
+		long j;
+		bytearr rawinfo;
+	};
+
+typedef UpdateInfo UpdateInfoarr[1];
+
+	interface UpdateTable
+	{
+		void updateTable(in UpdateInfoarr info);
+		void resizeY(in long y);
+	};
+};

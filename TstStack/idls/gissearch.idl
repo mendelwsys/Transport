@@ -1,0 +1,16 @@
+module gsconn
+{
+	interface IStorage
+	{
+		long getCurpos();
+		string getstrorage(in long i);
+		boolean hasMoreElements();
+		boolean hasPrevElements();
+		string nextElement();
+		long setposon(in long pos);
+            	string prevElement();
+		long size();
+	};
+
+
+};

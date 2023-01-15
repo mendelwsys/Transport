@@ -1,0 +1,90 @@
+<ConversionLog>
+    <Settings>
+        <Setting
+            Name = "LogFile"
+            Value = "tradingprob.xml"
+        />
+        <Setting
+            Name = "ProjectName"
+            Value = "tradingprob"
+        />
+        <Setting
+            Name = "OutputDir"
+            Value = "D:\forConvert\trading\tradingprob.NET"
+        />
+        <Setting
+            Name = "ProjectPath"
+            Value = "D:\forConvert\trading"
+        />
+    </Settings>
+    <File
+        OldPath = "D:\forConvert\trading\byte1AHelper.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\byte1AHelper.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\byte2AHelper.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\byte2AHelper.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\common\TradingConst.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\TradingConst.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\ITable.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\ITable.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\ITableProxy.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\ITableProxy.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\IUpdateTable.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\IUpdateTable.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\IUpdateTableProxy.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\IUpdateTableProxy.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\MetaInfo.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\MetaInfo.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\MetaInfo0AHelper.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\MetaInfo0AHelper.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\ProxyTable.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\ProxyTable.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\ProxyUpdateTable.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\ProxyUpdateTable.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\SkelTable.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\SkelTable.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\SkelUpdateTable.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\SkelUpdateTable.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\UpdateInfo.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\UpdateInfo.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\UpdateInfo0AHelper.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\UpdateInfo0AHelper.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\trading\UpdateInfo1AHelper.java"
+        NewPath = "D:\forConvert\trading\tradingprob.NET\UpdateInfo1AHelper.cs"
+    />
+    <Issue
+        Type = "Global Warning"
+        Number = "4007"
+        Severity = "2"
+    >The startup class  doesn't exist in the project</Issue>
+</ConversionLog>
+

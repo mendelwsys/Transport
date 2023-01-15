@@ -1,0 +1,78 @@
+<ConversionLog>
+    <Settings>
+        <Setting
+            Name = "LogFile"
+            Value = "chat.xml"
+        />
+        <Setting
+            Name = "ProjectName"
+            Value = "chat"
+        />
+        <Setting
+            Name = "OutputDir"
+            Value = "D:\forConvert\chat\chat.NET"
+        />
+        <Setting
+            Name = "ProjectPath"
+            Value = "D:\forConvert\chat"
+        />
+    </Settings>
+    <File
+        OldPath = "D:\forConvert\chat\boolean0AHolder.java"
+        NewPath = "D:\forConvert\chat\chat.NET\boolean0AHolder.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\byte1AHelper.java"
+        NewPath = "D:\forConvert\chat\chat.NET\byte1AHelper.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\byte1AHolder.java"
+        NewPath = "D:\forConvert\chat\chat.NET\byte1AHolder.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\IChatInterface.java"
+        NewPath = "D:\forConvert\chat\chat.NET\IChatInterface.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\IChatInterfaceProxy.java"
+        NewPath = "D:\forConvert\chat\chat.NET\IChatInterfaceProxy.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\ProxyChatInterface.java"
+        NewPath = "D:\forConvert\chat\chat.NET\ProxyChatInterface.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\SkelChatInterface.java"
+        NewPath = "D:\forConvert\chat\chat.NET\SkelChatInterface.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\String1AHelper.java"
+        NewPath = "D:\forConvert\chat\chat.NET\String1AHelper.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\String1AHolder.java"
+        NewPath = "D:\forConvert\chat\chat.NET\String1AHolder.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\TException1.java"
+        NewPath = "D:\forConvert\chat\chat.NET\TException1.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\TException10AHelper.java"
+        NewPath = "D:\forConvert\chat\chat.NET\TException10AHelper.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\TException2.java"
+        NewPath = "D:\forConvert\chat\chat.NET\TException2.cs"
+    />
+    <File
+        OldPath = "D:\forConvert\chat\TException20AHelper.java"
+        NewPath = "D:\forConvert\chat\chat.NET\TException20AHelper.cs"
+    />
+    <Issue
+        Type = "Global Warning"
+        Number = "4007"
+        Severity = "2"
+    >The startup class  doesn't exist in the project</Issue>
+</ConversionLog>
+

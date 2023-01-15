@@ -1,0 +1,38 @@
+<!DOCTYPE web-app 
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+    <display-name>Test Transport Application</display-name>
+    <description>
+	This is a test web application for testing servlet transport 
+    </description>
+
+    <servlet>
+        <servlet-name>InServlet</servlet-name>
+        <servlet-class>su.org.coder.multiplexer.protocols.http3url.servlets2.InServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OutServlet</servlet-name>
+        <servlet-class>su.org.coder.multiplexer.protocols.http3url.servlets2.OutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Test00Servlet</servlet-name>
+        <servlet-class>su.org.coder.multiplexer.protocols.http3url.test00.server.TestServlet00</servlet-class>
+    </servlet>
+                            
+    <servlet-mapping>
+        <servlet-name>Test00Servlet</servlet-name>
+        <url-pattern>/initsrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InServlet</servlet-name>
+        <url-pattern>/insrv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OutServlet</servlet-name>
+        <url-pattern>/outsrv</url-pattern>
+    </servlet-mapping>
+
+</web-app>

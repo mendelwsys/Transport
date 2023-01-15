@@ -1,0 +1,3 @@
+PUSHD classes
+%JAVA_HOME%bin\jar -cvf %1\%2 su\org\coder\multiplexer\*.class su\org\coder\multiplexer\client\*.class su\org\coder\multiplexer\server\*.class su\org\coder\multiplexer\protocols\IChannelFactory.class su\org\coder\multiplexer\protocols\IChannelFactoryImpl.class su\org\coder\multiplexer\protocols\IChannelFactoryImpl$1.class su\org\coder\multiplexer\protocols\IChannelFactoryImpl$2.class su\org\coder\multiplexer\protocols\ILgChannel.class su\org\coder\multiplexer\protocols\ILgChannelImpl.class su\org\coder\multiplexer\protocols\TunelMessage.class su\org\coder\multiplexer\protocols\http3url\HttpTunelMessage2.class
+POPD

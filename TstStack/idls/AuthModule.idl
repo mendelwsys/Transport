@@ -1,0 +1,9 @@
+module auth
+{
+
+	interface Authenticate {
+		string beginAuth (in string userName);
+		string endAuth (in string guessPhrase);
+	};
+
+};
